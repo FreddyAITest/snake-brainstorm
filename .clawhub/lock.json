@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "skills": {
+    "summarize": {
+      "version": "1.0.0",
+      "installedAt": 1773246544654
+    },
+    "gemini": {
+      "version": "1.0.0",
+      "installedAt": 1773246548341
+    }
+  }
+}
