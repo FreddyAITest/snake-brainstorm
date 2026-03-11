@@ -1,0 +1,14 @@
+title: Snake's Brainstorm
+description: Wild ideas, crazy thoughts, and things to revisit later
+theme: minima
+baseurl: ""
+url: "https://FreddyAITest.github.io"
+github:
+  repository_url: "https://github.com/FreddyAITest/snake-brainstorm"
+  source: .
+  branch: main
+
+markdown: kramdown
+highlighter: rouge
+
+permalink: /brainstorm/:title
