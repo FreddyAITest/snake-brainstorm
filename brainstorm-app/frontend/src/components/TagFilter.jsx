@@ -5,7 +5,7 @@ function TagFilter({ tags, value, onChange }) {
     return (
       <select
         disabled
-        className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-gray-400 focus:outline-none cursor-not-allowed"
+        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-400 text-sm cursor-not-allowed"
       >
         <option>No tags available</option>
       </select>
@@ -16,12 +16,12 @@ function TagFilter({ tags, value, onChange }) {
     <select
       value={value}
       onChange={(e) => onChange(e.target.value)}
-      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 transition-all cursor-pointer"
+      className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg text-gray-900 text-sm focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition-all cursor-pointer"
     >
       <option value="">All Tags</option>
       {tags.map((tag, idx) => (
         <option key={idx} value={tag}>
-          #{tag}
+          {tag}
         </option>
       ))}
     </select>

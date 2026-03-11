@@ -16,19 +16,19 @@ function BrainstormCard({ item, onEdit, onDelete }) {
   const tags = item.tags ? item.tags.split(',').map(t => t.trim()) : [];
 
   return (
-    <article className="group relative bg-gray-800/60 backdrop-blur-sm rounded-xl p-5 border border-gray-700/50 hover:border-emerald-500/50 hover:bg-gray-800/80 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1">
+    <article className="card-hover bg-white rounded-xl p-6 border border-gray-200 h-full flex flex-col">
       {/* Card Header */}
       <div className="flex items-start justify-between mb-3">
         <div className="flex-1 min-w-0">
-          <h3 className="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors duration-300 truncate">
+          <h3 className="text-lg font-semibold text-gray-900 mb-2 truncate">
             {item.title}
           </h3>
           {tags.length > 0 && (
-            <div className="flex flex-wrap gap-1.5 mt-2">
+            <div className="flex flex-wrap gap-1.5">
               {tags.map((tag, idx) => (
                 <span
                   key={idx}
-                  className="inline-flex items-center px-2 py-0.5 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-medium border border-emerald-500/20"
+                  className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-700 text-xs font-medium"
                 >
                   {tag}
                 </span>
@@ -37,11 +37,11 @@ function BrainstormCard({ item, onEdit, onDelete }) {
           )}
         </div>
         
-        {/* Action Buttons */}
-        <div className="flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ml-3">
+        {/* Action Buttons - Always visible on mobile, hover on desktop */}
+        <div className="flex items-center gap-1 ml-3">
           <button
             onClick={handleCopyToClipboard}
-            className="text-gray-400 hover:text-emerald-400 hover:bg-gray-700/60 transition-all rounded-lg p-2"
+            className="text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors rounded p-1.5"
             title="Copy to clipboard"
             aria-label="Copy content"
           >
@@ -51,7 +51,7 @@ function BrainstormCard({ item, onEdit, onDelete }) {
           </button>
           <button
             onClick={() => onEdit(item)}
-            className="text-gray-400 hover:text-emerald-400 hover:bg-gray-700/60 transition-all rounded-lg p-2"
+            className="text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors rounded p-1.5"
             title="Edit"
             aria-label="Edit brainstorm"
           >
@@ -61,7 +61,7 @@ function BrainstormCard({ item, onEdit, onDelete }) {
           </button>
           <button
             onClick={() => onDelete(item.id)}
-            className="text-gray-400 hover:text-red-400 hover:bg-gray-700/60 transition-all rounded-lg p-2"
+            className="text-gray-400 hover:text-red-600 hover:bg-red-50 transition-colors rounded p-1.5"
             title="Delete"
             aria-label="Delete brainstorm"
           >
@@ -73,12 +73,12 @@ function BrainstormCard({ item, onEdit, onDelete }) {
       </div>
 
       {/* Card Content */}
-      <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
+      <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3 flex-1">
         {item.content}
       </p>
 
       {/* Card Footer */}
-      <div className="flex items-center justify-between pt-3 border-t border-gray-700/50">
+      <div className="flex items-center justify-between pt-4 border-t border-gray-100 mt-auto">
         <div className="flex items-center gap-3 text-xs text-gray-500">
           <time dateTime={item.created_at} className="font-medium">
             {new Date(item.created_at).toLocaleDateString('de-DE', {
@@ -99,11 +99,8 @@ function BrainstormCard({ item, onEdit, onDelete }) {
 
       {/* Copy Toast */}
       {showToast && (
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-medium shadow-lg shadow-emerald-500/30 animate-fade-in z-50 flex items-center gap-2">
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-          </svg>
-          Copied!
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-medium shadow-lg animate-fade-in z-50">
+          Copied to clipboard
         </div>
       )}
     </article>

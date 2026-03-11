@@ -22,3 +22,6 @@
 - **Status:** All systems operational ✅
 - **21:10 UTC:** Netlify deployment in progress (404 during build)
 - **21:15 UTC:** Build loop detected (npm recursive call) → Fixed: `base = "brainstorm-app"` → Pushed commit 85e9fce
+- **21:16 UTC:** Duplicate netlify.toml removed + .gitignore added → Pushed commit 512ee7d → Netlify rebuilding
+- **21:17 UTC:** Submodule error (embedded brainstorm repo) → Removed from git → Pushed commit 9e4bfc0
+- **21:20 UTC:** Netlify LIVE ✅ (200 OK) - User feedback: "terrible design" → Gemini redesign in progress
