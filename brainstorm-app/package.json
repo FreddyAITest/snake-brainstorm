@@ -1,0 +1,22 @@
+{
+  "name": "brainstorm-app",
+  "version": "1.0.0",
+  "description": "Brainstorm Web App - Full Stack",
+  "scripts": {
+    "install:all": "npm install && cd frontend && npm install",
+    "start:backend": "node server.js",
+    "start:frontend": "cd frontend && npm run dev",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "build": "cd frontend && npm run build",
+    "build:prod": "cd frontend && npm run build",
+    "deploy": "npm run build && echo 'Ready for Netlify deploy'"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
