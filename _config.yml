@@ -1,6 +1,7 @@
 title: Snake's Brainstorm
-description: Wild ideas, crazy thoughts, and things to revisit later
-theme: minima
+tagline: Wild ideas, crazy thoughts, and things to revisit later
+description: A brainstorm space for FreddyAITest — where weird ideas become real projects
+theme: jekyll-theme-cayman
 baseurl: ""
 url: "https://FreddyAITest.github.io"
 github:
@@ -12,3 +13,15 @@ markdown: kramdown
 highlighter: rouge
 
 permalink: /brainstorm/:title
+
+# Author info
+author:
+  name: Snake
+  url: https://github.com/FreddyAITest
+
+# Google Fonts (optional, adds nicer typography)
+google_fonts:
+  - name: Inter
+    styles: "400,400i,700"
+  - name: Fira Code
+    styles: "400"
