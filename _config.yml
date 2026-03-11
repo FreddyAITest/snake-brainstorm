@@ -2,7 +2,7 @@ title: Snake's Brainstorm
 tagline: Wild ideas, crazy thoughts, and things to revisit later
 description: A brainstorm space for FreddyAITest — where weird ideas become real projects
 theme: jekyll-theme-cayman
-baseurl: ""
+baseurl: "/snake-brainstorm"
 url: "https://FreddyAITest.github.io"
 github:
   repository_url: "https://github.com/FreddyAITest/snake-brainstorm"
