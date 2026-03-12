@@ -71,6 +71,23 @@ const brainstorms = [
       "Bug pattern detection",
     ],
   },
+  {
+    id: 6,
+    title: "🌙 Overnight Web Crawl - 100+ Domains",
+    date: "2026-03-12",
+    status: "implemented",
+    tags: ["Automation", "Research", "Web Crawl"],
+    description:
+      "AI agent visited a random useful website every minute overnight. Tracked 100+ unique domains including dev resources, tech news, science, and tools. Full list published to GitHub.",
+    details: [
+      "Crawl period: 23:06 - 02:39 UTC (3.5 hours)",
+      "Interval: Every 60 seconds",
+      "Browser: Headless Chromium (OpenClaw)",
+      "Top categories: Dev/Code, Tech News, Science, Tools, Community",
+      "Output: visited-domains.md + blog post",
+      "Live: testingfrontendde.netlify.app",
+    ],
+  },
 ];
 
 export default brainstorms;
