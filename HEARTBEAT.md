@@ -72,6 +72,12 @@ Every hour, verify these background tasks are actually running:
   - Added hourly monitoring section to HEARTBEAT.md manually
   - Created scripts/cron-monitor.sh for automated hourly checks
   - Lesson: Don't assume background tasks are working - verify with actual monitoring
+- **2026-03-15 09:59 UTC:** INVESTIGATION COMPLETE - Root cause found
+  - Problem: No cron job was configured for the crawl
+  - Browser process was running but no scheduler was triggering the script
+  - Fix: Added `* * * * *` cron job to run scripts/visit-random-domain.sh every minute
+  - Verified: New entry appeared at 10:00 UTC (www.jwt.io) ✅
+  - Status: Crawl now automated and monitored hourly
 - **22:20 UTC:** Heartbeat check - VPS DOWN (000, user managing), Netlify ✅ 200 OK - no action needed
 - **22:10 UTC:** Heartbeat check - VPS still 000 (user managing), Netlify ✅ 200 OK - Standing by
 - **22:15 UTC:** Heartbeat check - VPS 000 (user managing site), Netlify ✅ 200 OK - All stable, standing by
