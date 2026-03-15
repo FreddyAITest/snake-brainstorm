@@ -302,3 +302,5 @@ https://apache.org/ | unknown |
 | 2026-03-15 07:38 UTC | vuejs.org | https://vuejs.org/ | 200 |
 | 2026-03-15 08:38 UTC | nuxt.com | https://nuxt.com/ | 200 |
 | 2026-03-15 09:39 UTC | www.livescience.com | https://www.livescience.com/ | 200 |
+| 2026-03-15 09:59 UTC | web.dev | https://web.dev/ | 200 |
+| 2026-03-15 10:00 UTC | www.jwt.io | https://www.jwt.io/ | 200 |
